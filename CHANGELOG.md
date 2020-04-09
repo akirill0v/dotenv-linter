@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🚀 Added
 
 ### 🔧 Changed
+- Rename `UnorderedKeys` check to singular `UnorderedKey` [#147](https://github.com/mgrachev/dotenv-linter/pull/147) ([@pineapplethief](https://github.com/pineapplethief))
+- KeyWithoutValue: Show check name in the message [#139](https://github.com/mgrachev/dotenv-linter/pull/139) ([@harshu4](https://github.com/harshu4))
+- LowercaseKey: Show check name in the message [#131](https://github.com/mgrachev/dotenv-linter/pull/131) ([@qelphybox](https://github.com/qelphybox))
+- DuplicatedKey: Show check name in message [#138](https://github.com/mgrachev/dotenv-linter/pull/138)([@SaMuRa1ReM1X](https://github.com/SaMuRa1ReM1X))
+- IncorrectDelimiter: Show check name in the message [#146](https://github.com/mgrachev/dotenv-linter/pull/146) ([undef1nd](https://github.com/undef1nd))
+- Replaced kcov with grcov in Github Actions [#143](https://github.com/mgrachev/dotenv-linter/pull/143) ([@pmk21](https://github.com/pmk21))
+- Streamline CLI tests and split into smaller files [#137](https://github.com/mgrachev/dotenv-linter/pull/137) ([@sonro](https://github.com/sonro))
+- UnorderedKey: Added check name to the message [#140](https://github.com/mgrachev/dotenv-linter/pull/140) ([@pmk21](https://github.com/pmk21))
+- Add test coverage for CLI --exclude arguments [#135](https://github.com/mgrachev/dotenv-linter/pull/135) ([@sonro](https://github.com/sonro))
+- Renamed check SpacesAroundEqual to SpaceCharacter [#134](https://github.com/mgrachev/dotenv-linter/pull/134) ([@SaMuRa1ReM1X](https://github.com/SaMuRa1ReM1X))
+- Rename check DuplicatedKeys to DuplicatedKey [#133](https://github.com/mgrachev/dotenv-linter/pull/133) ([@sonro](https://github.com/sonro))
 - Minimizing Rust Binary Size [#132](https://github.com/mgrachev/dotenv-linter/pull/132) ([@akirill0v](https://github.com/akirill0v))
 - Remove the unwrap method and use platform native OsString to fetch the information about current directory [#115](https://github.com/mgrachev/dotenv-linter/pull/115) ([@kanapuli](https://github.com/kanapuli))
 - Use HashSet for DuplicateKeyChecker [#113](https://github.com/mgrachev/dotenv-linter/pull/113) ([@TamasFlorin](https://github.com/TamasFlorin))

@@ -135,7 +135,7 @@ $ dotenv-linter -p /directory/where/to/run
 
 ## ✅ Checks
 
-### Duplicated Keys
+### Duplicated Key
 
 Detects if a key is not unique:
 
@@ -160,7 +160,7 @@ FOO-BAR=FOOBAR
 FOO_BAR=FOOBAR
 ```
 
-### Keys without values
+### Key without value
 
 Detects if a line has a key without a value:
 ```env
@@ -213,7 +213,7 @@ foo_bar=FOOBAR
 FOO_BAR=FOOBAR
 ```
 
-### Spaces around equal sign
+### Space character
 
 Detects lines with a whitespace around equal sign character `=`:
 
@@ -231,7 +231,7 @@ FOO = BAR
 FOO=BAR
 ```
 
-### Unordered Keys
+### Unordered Key
 
 Detects if a key is not alphabetically ordered:
 
@@ -248,13 +248,13 @@ FOO=BAR
 ## 📋 Roadmap
 
 - [x] Add more checks:
-  - [x] Duplicated keys;
+  - [x] Duplicated key;
   - [x] Incorrect delimiter;
-  - [x] Keys without values;
+  - [x] Key without value;
   - [x] Leading character;
   - [x] Lowercase keys;
-  - [x] Spaces around equal sign;
-  - [x] Unordered keys;
+  - [x] Space character;
+  - [x] Unordered key;
 - [x] Support [reviewdog](https://github.com/reviewdog/reviewdog);
 - [x] Create a GitHub Action for easily using `dotenv-linter`.
 

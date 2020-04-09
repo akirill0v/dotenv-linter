@@ -1,12 +1,12 @@
 use crate::common::*;
 
-mod duplicated_keys;
+mod duplicated_key;
 mod incorrect_delimiter;
 mod key_without_value;
 mod leading_character;
 mod lowercase_key;
-mod spaces_around_equal;
-mod unordered_keys;
+mod space_character;
+mod unordered_key;
 
 // This trait is used for checks which needs to know of only a single line
 trait Check {
@@ -16,13 +16,13 @@ trait Check {
 // Checklist for checks which needs to know of only a single line
 fn checklist() -> Vec<Box<dyn Check>> {
     vec![
-        Box::new(duplicated_keys::DuplicatedKeysChecker::default()),
+        Box::new(duplicated_key::DuplicatedKeyChecker::default()),
         Box::new(incorrect_delimiter::IncorrectDelimiterChecker::default()),
         Box::new(leading_character::LeadingCharacterChecker::default()),
         Box::new(key_without_value::KeyWithoutValueChecker::default()),
         Box::new(lowercase_key::LowercaseKeyChecker::default()),
-        Box::new(spaces_around_equal::SpacesAroundEqualChecker::default()),
-        Box::new(unordered_keys::UnorderedKeysChecker::default()),
+        Box::new(space_character::SpaceCharacterChecker::default()),
+        Box::new(unordered_key::UnorderedKeyChecker::default()),
     ]
 }
 
@@ -109,7 +109,9 @@ mod tests {
         };
         let warning = Warning::new(
             line.clone(),
-            String::from("The FOO key should be with a value or have an equal sign"),
+            String::from(
+                "KeyWithoutValue: The FOO key should be with a value or have an equal sign",
+            ),
         );
         let lines: Vec<LineEntry> = vec![line];
         let expected: Vec<Warning> = vec![warning];
